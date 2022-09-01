@@ -26,7 +26,7 @@ view: users {
     type: number
     sql: ${TABLE}.age ;;
     html: {% if value <10 %}<p style="background-color: #c6ecc6">{{ rendered_value }}</p>
-    {% elsif value <=10 and value <20 %}<p style="background-color: #34b4eb">{{ rendered_value }}</p>
+    {% elsif value >=10 and value <30 %}<p style="background-color: #34b4eb">{{ rendered_value }}</p>
     {% else %} <p style="background-color: #de34eb">{{ rendered_value }}</p>
     {% endif %};;
   }
