@@ -64,6 +64,22 @@ view: users {
     sql: ${TABLE}.created_at ;;
   }
 
+  dimension: date_html {
+    type: date
+    convert_tz: no
+    sql: {TABLE}.created_at ;;
+    html: {{ rendered_value | date: "%h %e, %Y" }};;
+  }
+
+  #dimension: start_date {
+   # group_label: "Start"
+    #label: "Start Date"
+    #type: date
+    #convert_tz: no
+    #sql: TO_TIMESTAMP_NTZ(${TABLE}."START_TIME") ;;
+    #html: {{ rendered_value | date: "%h %e, %Y" }};;
+  #}
+
   dimension: email {
     type: string
     sql: ${TABLE}.email ;;
