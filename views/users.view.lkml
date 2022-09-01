@@ -67,7 +67,7 @@ view: users {
   dimension: date_html {
     type: date
     convert_tz: no
-    sql: {TABLE}.created_at ;;
+    sql: ${TABLE}.created_at ;;
     html: {{ rendered_value | date: "%h %e, %Y" }};;
   }
 
