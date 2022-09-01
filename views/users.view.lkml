@@ -103,7 +103,9 @@ view: users {
     type: string
     sql: concat('https://en.wikipedia.org/wiki/',${TABLE}.state) ;;
 # html: <img src="{{value}}" width="200" height="200"> ;;
-    html: <a href="{{value | url_encode }}&width=1000&height=1000" target="_blank"> <img src="{{value | url_encode }}&width=1000&height=1000"width="250" style="border:2px solid black"/> </a> ;;
+    html: <a href="{{value | url_encode }}&width=1000&height=1000" target="_blank"> ;;
+    #<img src="{{value | url_encode }}&width=1000&height=1000"width="250" style="border:2px solid black"/> </a>
+
   }
 
   # ----- Sets of fields for drilling ------
