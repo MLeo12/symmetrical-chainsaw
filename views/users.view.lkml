@@ -103,7 +103,7 @@ view: users {
     type: string
     sql: concat('https://en.wikipedia.org/wiki/',${TABLE}.state) ;;
 # html: <img src="{{value}}" width="200" height="200"> ;;
-    html: {{value | url_encode }}<a href="{{value | url_encode }}&width=1000&height=1000" target="_blank"> ;;
+    html: {{value}}<a href="{{value | url_encode }}&width=1000&height=1000" target="_blank"> ;;
     #<img src="{{value | url_encode }}&width=1000&height=1000"width="250" style="border:2px solid black"/> </a>
 
   }
